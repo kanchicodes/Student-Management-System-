@@ -5,6 +5,14 @@
         "name": "shiv",
         "place": "shrirampur",
         "phone": "1111111111"
-        }
+        },
+
+        {
+            "id": 2,
+            "name": "sai",
+            "place": "shrirampur",
+            "phone": "2222222222"
+            }
+
     ]
 }
