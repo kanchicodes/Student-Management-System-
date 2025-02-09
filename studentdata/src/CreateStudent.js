@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function CreateStudent() {
@@ -6,12 +6,26 @@ export default function CreateStudent() {
     const[name , setName]=useState("");
     const[place , setPlace]=useState("");
     const[phone , setPhone]=useState("");
+    const navigate=  useNavigate();
      const handleSubmit=(e)=>{
         e.preventDefault();
-        console.log(id , name , place , phone);}
-        fetch("http://localhost:8000/students")
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err.message));
+       const studentData = {id , name , place , phone} ;
+        console.log(studentData);
+       
+        fetch("http://localhost:8000/students",{
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(studentData)
+        })
+        .then((res) => {
+            alert("Student data Saved successfully");
+            navigate("/");
+        })
+        .catch((err) => console.log(err.message)
+    )
+}
     
     return (
      <div className="container">
