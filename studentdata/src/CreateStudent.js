@@ -6,10 +6,17 @@ export default function CreateStudent() {
     const[name , setName]=useState("");
     const[place , setPlace]=useState("");
     const[phone , setPhone]=useState("");
+     const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(id , name , place , phone);}
+        fetch("http://localhost:8000/students")
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err.message));
+    
     return (
      <div className="container">
         <h2>Add New Student</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
             <label htmlFor="id">Id:</label>
             <input type="text" id="id" name="id" value={id}  onChange={e => setId(e.target.value)}/>
 
