@@ -1,0 +1,10 @@
+{
+    "students": [
+        {
+        "id": 1,
+        "name": "shiv",
+        "place": "shrirampur",
+        "phone": "1111111111"
+        }
+    ]
+}
