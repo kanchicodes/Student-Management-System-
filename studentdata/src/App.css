@@ -1,0 +1,137 @@
+body {
+    font-family: sans-serif; /* Choose a clean, readable font */
+    margin: 0; /* Remove default body margins */
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text color */
+  }
+  
+  .container {
+    width: 80%; /* Adjust width as needed */
+    margin: 20px auto; /* Center the content */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555; /* Slightly darker heading color */
+  }
+  
+  .add-student-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .add-student-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Light gray for header */
+    font-weight: bold;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5; /* Hover effect on rows */
+  }
+  
+  .actions {
+    display: flex; /* Arrange buttons horizontally */
+    gap: 5px; /* Spacing between buttons */
+  }
+  
+  .actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .actions button.view {
+    background-color: #2196F3; /* Blue */
+    color: white;
+  }
+  
+  .actions button.edit {
+    background-color: #FF9800; /* Orange */
+    color: white;
+  }
+  
+  .actions button.delete {
+    background-color: #F44336; /* Red */
+    color: white;
+  }
+  
+  .actions button:hover {
+    opacity: 0.8; /* Slightly transparent on hover */
+  }
+  
+  .delete-modal {
+    /* Style for the delete confirmation modal (not in the image, but good to have) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .delete-modal p {
+    margin-bottom: 15px;
+  }
+  
+  .delete-modal .modal-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px;
+  }
+  
+  .delete-modal .modal-buttons button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-modal .modal-buttons .confirm {
+    background-color: #F44336; /* Red */
+    color: white;
+  }
+  
+  .delete-modal .modal-buttons .cancel {
+    background-color: #ccc;
+    color: #333;
+  }
+  
