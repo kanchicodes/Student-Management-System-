@@ -32,16 +32,16 @@ export default function CreateStudent() {
         <h2>Add New Student</h2>
         <form onSubmit={handleSubmit}>
             <label htmlFor="id">Id:</label>
-            <input type="text" id="id" name="id" value={id}  onChange={e => setId(e.target.value)}/>
+            <input type="text" id="id" name="id" required value={id}  onChange={e => setId(e.target.value)}/>
 
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name"  value={name} onChange={e => setName(e.target.value)}/>
+            <input type="text" id="name" name="name" required value={name} onChange={e => setName(e.target.value)}/>
             
             <label htmlFor="place">Place:</label>
-            <input type="text" id="place" name="place" value={place} onChange={e => setPlace(e.target.value)} />
+            <input type="text" id="place" name="place" required value={place} onChange={e => setPlace(e.target.value)} />
 
             <label htmlFor="phone">Phone:</label>
-            <input type="text" id="phone" name="phone"  value={phone} onChange={e => setPhone(e.target.value)}/>
+            <input type="text" id="phone" name="phone" required value={phone} onChange={e => setPhone(e.target.value)}/>
 
             <div>
             <button className="btn btn-save">Save</button>
