@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
-import { data, Link } from "react-router-dom";
+import { data, Link , useNavigate } from "react-router-dom";
 
 export default function StudentTable() {
     // console.log(useState(1));
     const [students , setStudents ]=useState("");
+    const navigate = useNavigate();
+    const DisplayDetails = (id) => {
+        navigate("/Student/View/"+id);
+    }
  
 
     useEffect(() => {
@@ -33,13 +37,13 @@ export default function StudentTable() {
                         {
                           students &&  students.map ((item)=>(
 
-                                <tr>
+                                <tr key={item.id}>
                                 <td>{item.id}</td>
                                 <td>{item.name}</td>
                                 <td>{item.place}</td>
                                 <td>{item.phone}</td>
                                 <td>
-                                    <a href=" " className="btn btn-info">View</a>
+                                    <button onClick={()=>DisplayDetails(item.id)} className="btn btn-info">View</button>
                                     <a href=" " className="btn btn-primary">Edit</a>
                                     <a href=" " className="btn btn-denger">Delete</a>
                                 </td>
