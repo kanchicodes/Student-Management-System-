@@ -35,6 +35,12 @@
       "name": "rishab",
       "place": "pcmc",
       "phone": "888888888"
+    },
+    {
+      "id": "9",
+      "name": "pratik",
+      "place": "loni",
+      "phone": "7575757575"
     }
   ]
 }

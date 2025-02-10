@@ -14,10 +14,34 @@ export default function EditStudent() {
         useEffect(()=>{
             fetch("http://localhost:8000/students/"+studentid)
             .then((res) => res.json())
-            .then((data) => console.log(data))
+            .then((data) => {
+                setId(data.id);
+                setName(data.name);
+                setPlace(data.place);
+                setPhone(data.phone);
+            })
             .catch((err) => console.log(err.message))
         },[]); 
         const handleSubmit=()=>{
+            const handleSubmit=(e)=>{
+                e.preventDefault();
+               const studentData = {id , name , place , phone} ;
+                // console.log(studentData);
+               
+                fetch("http://localhost:8000/students"+studentid,{
+                    method: "PUT",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(studentData)
+                })
+                .then((res) => {
+                    alert("Student data Updated successfully");
+                    navigate("/");
+                })
+                .catch((err) => console.log(err.message)
+            )
+        }
     }
     // return (
         return (
