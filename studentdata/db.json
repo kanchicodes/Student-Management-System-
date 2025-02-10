@@ -13,12 +13,6 @@
       "phone": "2222222222"
     },
     {
-      "id": "4",
-      "name": "pankaj",
-      "place": "pune",
-      "phone": "4444444444"
-    },
-    {
       "id": "7",
       "name": "moni",
       "place": "hadapsar",
@@ -41,6 +35,12 @@
       "name": "pratik",
       "place": "loni",
       "phone": "7575757575"
+    },
+    {
+      "id": "10",
+      "name": "ten",
+      "place": "ten",
+      "phone": "10101010010"
     }
   ]
 }
