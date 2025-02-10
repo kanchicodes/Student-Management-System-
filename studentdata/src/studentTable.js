@@ -8,7 +8,9 @@ export default function StudentTable() {
     const DisplayDetails = (id) => {
         navigate("/Student/View/"+id);
     }
- 
+    const EdityDetails = (id) => {
+        navigate("/Student/Edit/"+id);
+    }
 
     useEffect(() => {
         fetch("http://localhost:8000/students")
@@ -44,7 +46,7 @@ export default function StudentTable() {
                                 <td>{item.phone}</td>
                                 <td>
                                     <button onClick={()=>DisplayDetails(item.id)} className="btn btn-info">View</button>
-                                    <a href=" " className="btn btn-primary">Edit</a>
+                                    <button onClick={()=>EdityDetails(item.id)} className="btn btn-primary">Edit</button>
                                     <a href=" " className="btn btn-denger">Delete</a>
                                 </td>
                             </tr>
